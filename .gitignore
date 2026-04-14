@@ -1,0 +1,14 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+public/generated/*
+!public/generated/.gitkeep
+!public/generated/*.png
+!public/generated/*.jpg
+!public/generated/*.jpeg
+!public/generated/*.webp

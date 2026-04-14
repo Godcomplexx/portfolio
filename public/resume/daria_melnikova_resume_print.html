@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daria Melnikova CV</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
+
+      :root {
+        --paper: #f6f4f0;
+        --ink: #1f2327;
+        --muted: #5a626d;
+        --line: #d3d6db;
+        --accent: #5d768f;
+        --accent-soft: #e6ebf1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "IBM Plex Mono", "Aptos", "Segoe UI", monospace;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .resume {
+        display: grid;
+        grid-template-columns: 240px minmax(0, 1fr);
+        min-height: 100vh;
+      }
+
+      .sidebar {
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)),
+          var(--accent-soft);
+        border-right: 1px solid var(--line);
+        padding: 22px 18px 20px;
+      }
+
+      .main {
+        padding: 22px 24px 24px;
+      }
+
+      .name {
+        margin: 0;
+        font-size: 26px;
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+      }
+
+      .role {
+        margin: 10px 0 0;
+        font-size: 11px;
+        line-height: 1.55;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      .sidebar-block + .sidebar-block,
+      .main-block + .main-block {
+        margin-top: 18px;
+      }
+
+      .label {
+        margin: 0 0 8px;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+      }
+
+      .contact-list,
+      .plain-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .contact-item,
+      .plain-item {
+        font-size: 10px;
+        line-height: 1.55;
+      }
+
+      .contact-item strong,
+      .plain-item strong {
+        display: block;
+        margin-bottom: 2px;
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .summary {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.72;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 14px;
+        padding-bottom: 7px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .section-head h2 {
+        margin: 0;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .section-head span {
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+      }
+
+      .experience-item,
+      .project-item,
+      .publication-item {
+        padding-top: 10px;
+      }
+
+      .experience-item + .experience-item,
+      .project-item + .project-item,
+      .publication-item + .publication-item {
+        margin-top: 10px;
+        border-top: 1px solid rgba(211, 214, 219, 0.72);
+      }
+
+      .experience-title,
+      .project-title {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.5;
+        font-weight: 700;
+      }
+
+      .experience-meta,
+      .project-meta {
+        margin: 2px 0 0;
+        font-size: 9px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+      }
+
+      .bullet-list {
+        margin: 8px 0 0;
+        padding-left: 16px;
+      }
+
+      .bullet-list li {
+        margin: 0 0 4px;
+        font-size: 10px;
+        line-height: 1.55;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 14px;
+        align-items: start;
+        grid-auto-rows: 1fr;
+      }
+
+      .project-item {
+        padding-top: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 100%;
+      }
+
+      .publication-item p,
+      .education-item p {
+        margin: 0;
+        font-size: 10px;
+        line-height: 1.55;
+      }
+
+      .education-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .education-item {
+        padding-top: 8px;
+        border-top: 1px solid rgba(211, 214, 219, 0.72);
+      }
+
+      .education-item:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .education-degree {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+      }
+
+      .publication-item strong,
+      .education-item strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 10px;
+      }
+
+      .footer-note {
+        margin-top: 16px;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+        font-size: 9px;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <article class="resume">
+      <aside class="sidebar">
+        <h1 class="name">Daria Melnikova</h1>
+        <p class="role">R&amp;D Systems Engineer<br />AI / Neurotech / Biomedical ML</p>
+
+        <section class="sidebar-block">
+          <p class="label">Contact</p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:daha442242@gmail.com">daha442242@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <strong>GitHub</strong>
+              <a href="https://github.com/Godcomplexx">github.com/Godcomplexx</a>
+            </div>
+            <div class="contact-item">
+              <strong>Portfolio</strong>
+              <a href="https://godcomplexx.github.io/portfolio/">godcomplexx.github.io/portfolio/</a>
+            </div>
+            <div class="contact-item">
+              <strong>ORCID</strong>
+              <a href="https://orcid.org/0009-0000-6516-8216">0009-0000-6516-8216</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="sidebar-block">
+          <p class="label">Core Stack</p>
+          <div class="plain-list">
+            <div class="plain-item">
+              <strong>AI / ML</strong>
+              PyTorch, TensorFlow, Scikit-learn, XGBoost
+            </div>
+            <div class="plain-item">
+              <strong>Signals</strong>
+              EEG, EMG, audio processing, MNE, feature engineering
+            </div>
+            <div class="plain-item">
+              <strong>Vision</strong>
+              OpenCV, MediaPipe, YOLOv8, medical imaging pipelines
+            </div>
+            <div class="plain-item">
+              <strong>Backend</strong>
+              FastAPI, Docker, Celery, RabbitMQ, REST APIs
+            </div>
+            <div class="plain-item">
+              <strong>Hardware</strong>
+              Orange Pi, GPIO, edge AI deployment, system integration
+            </div>
+            <div class="plain-item">
+              <strong>Tools</strong>
+              React, TypeScript, Unity, Blender, Plasticity, Git
+            </div>
+          </div>
+        </section>
+
+        <section class="sidebar-block">
+          <p class="label">Education</p>
+          <div class="education-list">
+            <div class="education-item">
+              <strong>2025 · Master</strong>
+              <p>Samara State Medical University (SamGMU)</p>
+              <p class="education-degree">PISh, Artificial Intelligence Engineering</p>
+            </div>
+            <div class="education-item">
+              <strong>2023 · Bachelor</strong>
+              <p>Samara State Transport University</p>
+              <p class="education-degree">Informatics and Computer Engineering</p>
+            </div>
+            <div class="education-item">
+              <strong>2023 · Additional Education</strong>
+              <p>Samara State Transport University</p>
+              <p class="education-degree">Translator</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="sidebar-block">
+          <p class="label">Courses</p>
+          <div class="plain-list">
+            <div class="plain-item">2025 · Neuromatch</div>
+            <div class="plain-item">2025 · FastAI</div>
+          </div>
+        </section>
+      </aside>
+
+      <main class="main">
+        <section class="main-block">
+          <div class="section-head">
+            <h2>Summary</h2>
+            <span>3+ years</span>
+          </div>
+          <p class="summary">
+            R&amp;D systems engineer with 3+ years of hands-on experience in practical AI for neurotechnology and
+            biomedical products. I work across the full path from data acquisition and signal processing to inference,
+            interfaces, and deployable system design, with a product-oriented focus on systems that can move from
+            research into usable clinical and engineering workflows.
+          </p>
+        </section>
+
+        <section class="main-block">
+          <div class="section-head">
+            <h2>Experience</h2>
+            <span>SamGMU · 2023-Present</span>
+          </div>
+          <article class="experience-item">
+            <p class="experience-title">R&amp;D Engineer, Research Institute, Samara State Medical University</p>
+            <p class="experience-meta">Sep 2023 - Present</p>
+            <ul class="bullet-list">
+              <li>Designed and implemented end-to-end ML pipelines for EEG, audio, and video data.</li>
+              <li>Built microservices for real-time signal processing, inference, and biomedical workflows.</li>
+              <li>Developed computer vision systems using MediaPipe and YOLOv8.</li>
+              <li>Created VR rehabilitation scenarios in Unity with Ultraleap hand tracking.</li>
+              <li>Implemented an audio apnea detection pipeline with over 80% accuracy.</li>
+              <li>Built MRI processing pipelines from DICOM conversion to segmentation services.</li>
+              <li>Designed an embedded AI device for concussion screening on Orange Pi.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="main-block">
+          <div class="section-head">
+            <h2>Selected Projects</h2>
+            <span>2025-2026</span>
+          </div>
+          <div class="project-grid">
+            <article class="project-item">
+              <p class="project-title">AI-based Concussion Screening Device</p>
+              <p class="project-meta">Edge AI / Hardware / Patent co-author</p>
+            </article>
+            <article class="project-item">
+              <p class="project-title">Hybrid EEG Speller (P300 + LLM)</p>
+              <p class="project-meta">BCI / LLM-assisted communication / A-B study</p>
+            </article>
+            <article class="project-item">
+              <p class="project-title">Medical Image Segmentation Service</p>
+              <p class="project-meta">Medical imaging / Microservices / Async processing</p>
+            </article>
+            <article class="project-item">
+              <p class="project-title">Epileptic Seizure Prediction</p>
+              <p class="project-meta">EEG / CNN-LSTM / Transfer learning</p>
+            </article>
+            <article class="project-item">
+              <p class="project-title">APNEA</p>
+              <p class="project-meta">Audio ML / adaptive cascade / over 80% accuracy</p>
+            </article>
+            <article class="project-item">
+              <p class="project-title">Hybrid Emotional Response Analysis</p>
+              <p class="project-meta">Video + EEG fusion / batch analytics outputs</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="main-block">
+          <div class="section-head">
+            <h2>Publications</h2>
+            <span>2024</span>
+          </div>
+          <article class="publication-item">
+            <strong>Machine Learning Pipeline for Automated Detection of Sleep Apnea Episodes</strong>
+            <p>IEEE CNN 2024</p>
+          </article>
+          <article class="publication-item">
+            <strong>Deep Learning-Based Analysis of EEG Biomarkers</strong>
+            <p>Science and Innovations in Medicine, 2024</p>
+          </article>
+        </section>
+
+        <p class="footer-note">
+          Portfolio projects and additional implementation details are available at
+          <a href="https://godcomplexx.github.io/portfolio/">godcomplexx.github.io/portfolio/</a>.
+        </p>
+      </main>
+    </article>
+  </body>
+</html>
