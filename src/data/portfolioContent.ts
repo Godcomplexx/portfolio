@@ -281,8 +281,8 @@ export const portfolioContent = {
     },
   ] satisfies AboutRow[],
   experienceTitle: {
-    en: 'Experience (3+ years) - Research Institute, Samara State Medical University (Sep 2023 - Present)',
-    ru: 'Опыт (3+ года) - НИИ СамГМУ (сентябрь 2023 - настоящее время)',
+    en: 'Experience (3+ years) - Research Institute, Samara State Medical University (2023 - Present)',
+    ru: 'Опыт (3+ года) - НИИ СамГМУ (2023 - настоящее время)',
   },
   experienceHighlights: {
     en: [
@@ -760,6 +760,5 @@ export const portfolioContent = {
     site: null,
   },
 } as const;
-
 
 
