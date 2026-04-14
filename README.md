@@ -20,6 +20,16 @@ Portfolio site for Daria Melnikova built with React, Vite, and Three.js.
 - GitHub repository: `https://github.com/Godcomplexx/portfolio`
 - GitHub Pages URL: `https://godcomplexx.github.io/portfolio/`
 
+### GitHub Pages setup
+
+1. Push this repository to GitHub.
+2. Open `Settings -> Pages`.
+3. In `Source`, select `GitHub Actions`.
+4. Push to the `main` branch.
+5. Wait for the `Deploy to GitHub Pages` workflow to finish.
+
+The workflow file is stored at `.github/workflows/deploy.yml`.
+
 ## Project Files
 
 - Resume HTML: `public/resume/daria_melnikova_resume_print.html`
