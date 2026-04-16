@@ -117,12 +117,12 @@ export default function App() {
   const resumeHref = `${base}resume/Daria_Melnikova_CV.pdf`;
   const labComparatorPairs = [
     [
-      `${base}projects/3d/concussion-device-cad.webp`,
+      `${base}projects/3d/TBI/concussion-device-cad.webp`,
       `${base}projects/concussion-device-render.webp`,
     ],
     [
-      `${base}projects/3d/cam.webp`,
-      `${base}projects/3d/render-camera-module.webp`,
+      `${base}projects/3d/camera/cam.webp`,
+      `${base}projects/3d/camera/render-camera-module.webp`,
     ],
   ] as const;
   const ui = portfolioUi[lang];
