@@ -101,7 +101,7 @@ const ACT3_FEATURED_PROJECT_ASSETS = {
   hard3d: project3dAsset('camera/render-camera-module.webp'),
 } as const;
 const MAX_OVERLAY_MEDIA = 3;
-const ACT3_INTRO_STILL_ASSET = project3dAsset('tentikales/camsmth1.png');
+const ACT3_INTRO_STILL_ASSET = project3dAsset('tentikales/camsmth1.webp');
 const ACT3_INTRO_VIDEO_ASSET = project3dAsset('3d cam ver1/0408.mp4');
 type ArenaTheme = 'environment' | 'camera' | 'device' | 'vending' | 'experimental';
 type ArenaMediaBundle = {
@@ -130,7 +130,7 @@ type ArenaGalleryMeta = {
 const ACT3_ARENA_MEDIA_BUNDLES = [
   {
     theme: 'environment' as ArenaTheme,
-    stills: ['room/render-room-hallway.webp', 'room/lastroom_png.png', 'room/testroomnew.png'],
+    stills: ['room/render-room-hallway.webp', 'room/lastroom_png.webp', 'room/testroomnew.webp'],
     bundle: {
       title: { en: 'Environment Study', ru: 'Исследование окружения' },
       year: { en: '2025-2026', ru: '2025-2026' },
@@ -142,8 +142,8 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       metric: { en: 'Grouped from one scene folder', ru: 'Собрано из одной папки сцены' },
       media: [
         project3dAsset('room/render-room-hallway.webp'),
-        project3dAsset('room/lastroom_png.png'),
-        project3dAsset('room/testroomnew.png'),
+        project3dAsset('room/lastroom_png.webp'),
+        project3dAsset('room/testroomnew.webp'),
       ],
     },
   },
@@ -200,7 +200,7 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
   },
   {
     theme: 'camera' as ArenaTheme,
-    stills: ['tentikales/camsmth1.png', 'tentikales/photo_2026-01-25_20-10-12.jpg'],
+    stills: ['tentikales/camsmth1.webp', 'tentikales/photo_2026-01-25_20-10-12.jpg'],
     bundle: {
       title: { en: 'Tentacle Camera Study', ru: 'Исследование камеры с щупальцами' },
       year: { en: '2025-2026', ru: '2025-2026' },
@@ -211,14 +211,14 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       },
       metric: { en: 'Two related stills from one folder', ru: 'Два связанных кадра из одной папки' },
       media: [
-        project3dAsset('tentikales/camsmth1.png'),
+        project3dAsset('tentikales/camsmth1.webp'),
         project3dAsset('tentikales/photo_2026-01-25_20-10-12.jpg'),
       ],
     },
   },
   {
     theme: 'device' as ArenaTheme,
-    stills: ['TBI/concussion-device-cad.webp', 'TBI/concussion-device-render - Copy.png'],
+    stills: ['TBI/concussion-device-cad.webp', 'TBI/concussion-device-render - Copy.webp'],
     bundle: {
       title: { en: 'Device Concept Pack', ru: 'Пакет концептов устройства' },
       year: { en: '2025-2026', ru: '2025-2026' },
@@ -230,13 +230,13 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       metric: { en: 'CAD and polished stills from one folder', ru: 'CAD и чистовые рендеры из одной папки' },
       media: [
         project3dAsset('TBI/concussion-device-cad.webp'),
-        project3dAsset('TBI/concussion-device-render - Copy.png'),
+        project3dAsset('TBI/concussion-device-render - Copy.webp'),
       ],
     },
   },
   {
     theme: 'device' as ArenaTheme,
-    stills: ['cd/cd.png', 'cd/cd2.png', 'cd/test2.png'],
+    stills: ['cd/cd.webp', 'cd/cd2.webp', 'cd/test2.webp'],
     videos: ['cd/02.mov'],
     bundle: {
       title: { en: 'Optical Disc Study', ru: 'Исследование оптического объекта' },
@@ -248,20 +248,20 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       },
       metric: { en: 'Still set with same-folder motion', ru: 'Набор рендеров и видео из одной папки' },
       media: [
-        project3dAsset('cd/cd.png'),
-        project3dAsset('cd/cd2.png'),
+        project3dAsset('cd/cd.webp'),
+        project3dAsset('cd/cd2.webp'),
         project3dAsset('cd/02.mov'),
       ],
       previewImages: [
-        project3dAsset('cd/cd.png'),
-        project3dAsset('cd/cd2.png'),
-        project3dAsset('cd/test2.png'),
+        project3dAsset('cd/cd.webp'),
+        project3dAsset('cd/cd2.webp'),
+        project3dAsset('cd/test2.webp'),
       ],
     },
   },
   {
     theme: 'device' as ArenaTheme,
-    stills: ['sigh/21.png', 'sigh/4.png', 'sigh/Untitled.png'],
+    stills: ['sigh/21.webp', 'sigh/4.webp', 'sigh/Untitled.webp'],
     videos: ['sigh/02.mp4'],
     bundle: {
       title: { en: 'Sigh Disc Study', ru: 'Исследование объекта sigh' },
@@ -273,20 +273,20 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       },
       metric: { en: 'One folder = one project', ru: 'Одна папка = один проект' },
       media: [
-        project3dAsset('sigh/21.png'),
-        project3dAsset('sigh/4.png'),
+        project3dAsset('sigh/21.webp'),
+        project3dAsset('sigh/4.webp'),
         project3dAsset('sigh/02.mp4'),
       ],
       previewImages: [
-        project3dAsset('sigh/21.png'),
-        project3dAsset('sigh/4.png'),
-        project3dAsset('sigh/Untitled.png'),
+        project3dAsset('sigh/21.webp'),
+        project3dAsset('sigh/4.webp'),
+        project3dAsset('sigh/Untitled.webp'),
       ],
     },
   },
   {
     theme: 'vending' as ArenaTheme,
-    stills: ['vend/render-vending-island.webp', 'vend/render-vending-closeup.webp', 'vend/test.png'],
+    stills: ['vend/render-vending-island.webp', 'vend/render-vending-closeup.webp', 'vend/test.webp'],
     videos: ['vend/vending.mp4'],
     bundle: {
       title: { en: 'Product Island Study', ru: 'Исследование продуктового острова' },
@@ -301,19 +301,19 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
         project3dAsset('vend/render-vending-island.webp'),
         project3dAsset('vend/vending.mp4'),
         project3dAsset('vend/render-vending-closeup.webp'),
-        project3dAsset('vend/test.png'),
+        project3dAsset('vend/test.webp'),
       ],
       previewImages: [
         project3dAsset('vend/render-vending-island.webp'),
         project3dAsset('vend/render-vending-island.webp'),
         project3dAsset('vend/render-vending-closeup.webp'),
-        project3dAsset('vend/test.png'),
+        project3dAsset('vend/test.webp'),
       ],
     },
   },
   {
     theme: 'experimental' as ArenaTheme,
-    stills: ['cube/render-glass-object.webp', 'cube/Untitled.png'],
+    stills: ['cube/render-glass-object.webp', 'cube/Untitled.webp'],
     videos: ['cube/without.mp4'],
     bundle: {
       title: { en: 'Glass Object Study', ru: 'Исследование стеклянного объекта' },
@@ -327,18 +327,18 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       media: [
         project3dAsset('cube/render-glass-object.webp'),
         project3dAsset('cube/without.mp4'),
-        project3dAsset('cube/Untitled.png'),
+        project3dAsset('cube/Untitled.webp'),
       ],
       previewImages: [
         project3dAsset('cube/render-glass-object.webp'),
         project3dAsset('cube/render-glass-object.webp'),
-        project3dAsset('cube/Untitled.png'),
+        project3dAsset('cube/Untitled.webp'),
       ],
     },
   },
   {
     theme: 'experimental' as ArenaTheme,
-    stills: ['isometric practise/space.png', 'isometric practise/space2.png', 'isometric practise/Untitled12.png'],
+    stills: ['isometric practise/space.webp', 'isometric practise/space2.webp', 'isometric practise/Untitled12.webp'],
     bundle: {
       title: { en: 'Isometric Practice', ru: 'Изометрическая практика' },
       year: { en: '2025-2026', ru: '2025-2026' },
@@ -349,15 +349,15 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       },
       metric: { en: 'Multiple stills from one scene folder', ru: 'Несколько рендеров из одной папки сцены' },
       media: [
-        project3dAsset('isometric practise/space.png'),
-        project3dAsset('isometric practise/space2.png'),
-        project3dAsset('isometric practise/Untitled12.png'),
+        project3dAsset('isometric practise/space.webp'),
+        project3dAsset('isometric practise/space2.webp'),
+        project3dAsset('isometric practise/Untitled12.webp'),
       ],
     },
   },
   {
     theme: 'experimental' as ArenaTheme,
-    stills: ['duck/strange_duck.png', 'duck/duck.png', 'duck/ducky.png'],
+    stills: ['duck/strange_duck.webp', 'duck/duck.webp', 'duck/ducky.webp'],
     bundle: {
       title: { en: 'Character Form Study', ru: 'Исследование формы персонажа' },
       year: { en: '2025-2026', ru: '2025-2026' },
@@ -368,15 +368,15 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       },
       metric: { en: 'Three related stills from one folder', ru: 'Три связанных рендера из одной папки' },
       media: [
-        project3dAsset('duck/strange_duck.png'),
-        project3dAsset('duck/duck.png'),
-        project3dAsset('duck/ducky.png'),
+        project3dAsset('duck/strange_duck.webp'),
+        project3dAsset('duck/duck.webp'),
+        project3dAsset('duck/ducky.webp'),
       ],
     },
   },
   {
     theme: 'experimental' as ArenaTheme,
-    stills: ['test/cup.png', 'test/photo_2025-09-23_15-22-46.jpg', 'test/photo_2026-01-03_19-11-42.jpg'],
+    stills: ['test/cup.webp', 'test/photo_2025-09-23_15-22-46.jpg', 'test/photo_2026-01-03_19-11-42.jpg'],
     bundle: {
       title: { en: 'Small Test Study', ru: 'Небольшой тестовый этюд' },
       year: { en: '2025-2026', ru: '2025-2026' },
@@ -387,7 +387,7 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       },
       metric: { en: 'One folder = one project', ru: 'Одна папка = один проект' },
       media: [
-        project3dAsset('test/cup.png'),
+        project3dAsset('test/cup.webp'),
         project3dAsset('test/photo_2025-09-23_15-22-46.jpg'),
         project3dAsset('test/photo_2026-01-03_19-11-42.jpg'),
       ],
@@ -399,7 +399,7 @@ const ACT3_GALLERY_ASSETS = ACT3_ARENA_MEDIA_BUNDLES.map(getArenaEntryCoverAsset
 const ACT3_VIDEO_POSTERS: Record<string, string> = {
   [ACT3_INTRO_VIDEO_ASSET]: project3dPosterAsset('0408.webp'),
   [project3dAsset('camera/test.mp4')]: project3dAsset('camera/render-camera-module.webp'),
-  [project3dAsset('cd/02.mov')]: project3dAsset('cd/cd.png'),
+  [project3dAsset('cd/02.mov')]: project3dAsset('cd/cd.webp'),
   [project3dAsset('vend/vending.mp4')]: project3dAsset('vend/render-vending-island.webp'),
   [project3dAsset('cube/without.mp4')]: project3dAsset('cube/render-glass-object.webp'),
 };

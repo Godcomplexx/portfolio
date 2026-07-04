@@ -741,9 +741,9 @@ export const portfolioContent = {
       },
       category: 'hard3d',
       images: [
-        projectAsset('3d/camera/render-camera-module.png'),
-        projectAsset('3d/camera/render-camera-closeup.png'),
-        projectAsset('3d/cube/render-glass-object.png'),
+        projectAsset('3d/camera/render-camera-module.webp'),
+        projectAsset('3d/camera/render-camera-closeup.webp'),
+        projectAsset('3d/cube/render-glass-object.webp'),
       ],
       previewImages: [
         projectPreviewAsset('3d/render-camera-module.webp'),
