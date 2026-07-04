@@ -1,6 +1,7 @@
 ﻿import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
@@ -1288,6 +1289,7 @@ export default function ThreeDLabPage() {
     applyScreenLayout(DEFAULT_SCREEN_LAYOUT);
 
     const gltfLoader = new GLTFLoader();
+    gltfLoader.setMeshoptDecoder(MeshoptDecoder);
     let introModelRoot: THREE.Object3D | null = null;
     let hasModelScreen = false;
     const modelScreenMaterials: Array<THREE.MeshStandardMaterial | THREE.MeshPhysicalMaterial | THREE.MeshBasicMaterial> = [];
