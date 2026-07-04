@@ -1,8 +1,9 @@
-import {StrictMode, useEffect, useLayoutEffect, useState} from 'react';
+import {StrictMode, Suspense, lazy, useEffect, useLayoutEffect, useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
-import ThreeDLabPage from './ThreeDLabPage.tsx';
 import './index.css';
+
+const ThreeDLabPage = lazy(() => import('./ThreeDLabPage.tsx'));
 
 type Route = 'home' | '3d-lab';
 
@@ -34,7 +35,13 @@ function RootRouter() {
     window.scrollTo(0, 0);
   }, [route]);
 
-  return route === '3d-lab' ? <ThreeDLabPage /> : <App />;
+  return route === '3d-lab' ? (
+    <Suspense fallback={null}>
+      <ThreeDLabPage />
+    </Suspense>
+  ) : (
+    <App />
+  );
 }
 
 createRoot(document.getElementById('root')!).render(

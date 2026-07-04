@@ -4,4 +4,13 @@ import {defineConfig} from 'vite';
 export default defineConfig({
   base: '/portfolio/',
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three'],
+        },
+      },
+    },
+  },
 });
