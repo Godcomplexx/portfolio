@@ -150,7 +150,7 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
   {
     theme: 'camera' as ArenaTheme,
     stills: ['camera/render-camera-module.webp', 'camera/render-camera-closeup.webp', 'camera/cam.webp'],
-    videos: ['camera/test.mov'],
+    videos: ['camera/test.mp4'],
     bundle: {
       title: { en: 'Camera Module Study', ru: 'Исследование камерного модуля' },
       year: { en: '2025-2026', ru: '2025-2026' },
@@ -164,7 +164,7 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
         project3dAsset('camera/render-camera-module.webp'),
         project3dAsset('camera/render-camera-closeup.webp'),
         project3dAsset('camera/cam.webp'),
-        project3dAsset('camera/test.mov'),
+        project3dAsset('camera/test.mp4'),
       ],
       previewImages: [
         project3dAsset('camera/render-camera-module.webp'),
@@ -177,7 +177,7 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
   {
     theme: 'camera' as ArenaTheme,
     stills: [],
-    videos: ['3d cam ver1/0408.mp4', '3d cam ver1/0604 (1)(1).mov'],
+    videos: ['3d cam ver1/0408.mp4', '3d cam ver1/0604 (1)(1).mp4'],
     cover: project3dPosterAsset('0408.webp'),
     bundle: {
       title: { en: 'Camera Motion Study', ru: 'Исследование motion-камеры' },
@@ -190,7 +190,7 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       metric: { en: 'Video-only project from one folder', ru: 'Отдельный video-only проект из одной папки' },
       media: [
         project3dAsset('3d cam ver1/0408.mp4'),
-        project3dAsset('3d cam ver1/0604 (1)(1).mov'),
+        project3dAsset('3d cam ver1/0604 (1)(1).mp4'),
       ],
       previewImages: [
         project3dPosterAsset('0408.webp'),
@@ -262,7 +262,7 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
   {
     theme: 'device' as ArenaTheme,
     stills: ['sigh/21.png', 'sigh/4.png', 'sigh/Untitled.png'],
-    videos: ['sigh/02.mov'],
+    videos: ['sigh/02.mp4'],
     bundle: {
       title: { en: 'Sigh Disc Study', ru: 'Исследование объекта sigh' },
       year: { en: '2025-2026', ru: '2025-2026' },
@@ -275,7 +275,7 @@ const ACT3_ARENA_MEDIA_BUNDLES = [
       media: [
         project3dAsset('sigh/21.png'),
         project3dAsset('sigh/4.png'),
-        project3dAsset('sigh/02.mov'),
+        project3dAsset('sigh/02.mp4'),
       ],
       previewImages: [
         project3dAsset('sigh/21.png'),
@@ -398,7 +398,7 @@ const getArenaEntryCoverAsset = (entry: ArenaMediaBundleEntry) => entry.cover ??
 const ACT3_GALLERY_ASSETS = ACT3_ARENA_MEDIA_BUNDLES.map(getArenaEntryCoverAsset);
 const ACT3_VIDEO_POSTERS: Record<string, string> = {
   [ACT3_INTRO_VIDEO_ASSET]: project3dPosterAsset('0408.webp'),
-  [project3dAsset('camera/test.mov')]: project3dAsset('camera/render-camera-module.webp'),
+  [project3dAsset('camera/test.mp4')]: project3dAsset('camera/render-camera-module.webp'),
   [project3dAsset('cd/02.mov')]: project3dAsset('cd/cd.png'),
   [project3dAsset('vend/vending.mp4')]: project3dAsset('vend/render-vending-island.webp'),
   [project3dAsset('cube/without.mp4')]: project3dAsset('cube/render-glass-object.webp'),
