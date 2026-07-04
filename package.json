@@ -18,6 +18,8 @@
     "three": "^0.183.2"
   },
   "devDependencies": {
+    "@gltf-transform/core": "^4.4.1",
+    "@gltf-transform/extensions": "^4.4.1",
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.4",
     "typescript": "~5.8.2",

@@ -93,11 +93,11 @@ export default function NeuroLightBackdrop({ visible }: NeuroLightBackdropProps)
     const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
     const renderer = new THREE.WebGLRenderer({
       alpha: true,
-      antialias: !isMobile,
+      antialias: false,
       powerPreference: 'high-performance',
     });
     renderer.setClearColor(0x000000, 0);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.1 : 1.6));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.1 : 1.25));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = isMobile ? 0.84 : 0.9;
@@ -193,7 +193,7 @@ export default function NeuroLightBackdrop({ visible }: NeuroLightBackdropProps)
           materialList.forEach((material) => {
             if (material instanceof THREE.PointsMaterial) {
               material.color.setRGB(0.47, 0.66, 0.9);
-              material.opacity = Math.min(material.opacity ?? 1, 0.62);
+              material.opacity = Math.min(material.opacity ?? 1, 0.8);
               material.transparent = true;
             }
           });
